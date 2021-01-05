@@ -1,0 +1,48 @@
+#include <Joystick.h>
+
+/* by Marreta756 - Brazil */
+
+Joystick_ Joystick;
+
+int XAxis_ = 0; 
+int YAxis_ = 0;                    
+int ZAxis_ = 0;  
+int RxAxis_ = 0;          
+int RyAxis_ = 0; 
+int RzAxis_ = 0;     
+
+const bool initAutoSendState = true; 
+
+void setup()
+{
+      Joystick.begin();
+  }
+   
+void loop(){
+
+XAxis_ = analogRead(A0);
+XAxis_ = map(XAxis_,0,1023,0,255);
+Joystick.setXAxis(XAxis_);
+
+YAxis_ = analogRead(A1);
+YAxis_ = map(YAxis_,0,1023,0,255);
+Joystick.setYAxis(YAxis_);
+
+ZAxis_ = analogRead(A2);
+ZAxis_ = map(ZAxis_,0,1023,0,255);
+Joystick.setZAxis(ZAxis_);
+
+RxAxis_ = analogRead(A3);
+RxAxis_ = map(RxAxis_,0,1023,0,255);
+Joystick.setRxAxis(RxAxis_);
+
+RyAxis_ = analogRead(A4);
+RyAxis_ = map(RyAxis_,0,1023,0,255);
+Joystick.setRyAxis(RyAxis_);
+
+RzAxis_ = analogRead(A5);
+RzAxis_ = map(RzAxis_,0,1023,0,255);
+Joystick.setRzAxis(RzAxis_);
+ 
+delay (50);
+}
