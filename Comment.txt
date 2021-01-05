@@ -1,0 +1,2 @@
+
+Just install the arduino IDE, insert the sketch and include a "joystick.h" library. Make sure the correct door is selected and run the sketch. I use the 6 analog ports of the Leonardo board, 0 to 5. Soon, I will launch another sketch including, push bottons, rotary encoders and on-off switches. I tested this conformation on X-Plane 11.51 and MSFS 2020. Doubts: make contact directly at pauerosca@gmail.com
